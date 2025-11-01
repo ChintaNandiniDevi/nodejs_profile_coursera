@@ -8,7 +8,7 @@ const jwt = require('jsonwebtoken');
 const config = require('config');
 const jwtToken = config.get('jwtToken')
 
-route.get('/',auth,  async(req, res) => {
+route.get('/',  async(req, res) => {
     try{
         const users = await Users.find();
         return res.status(200).json(users);
